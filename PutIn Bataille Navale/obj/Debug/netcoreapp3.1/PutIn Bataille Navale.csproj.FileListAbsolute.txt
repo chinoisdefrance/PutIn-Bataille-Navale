@@ -1,0 +1,11 @@
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.exe
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.deps.json
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.runtimeconfig.json
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.runtimeconfig.dev.json
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.dll
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\bin\Debug\netcoreapp3.1\PutIn Bataille Navale.pdb
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\obj\Debug\netcoreapp3.1\PutIn Bataille Navale.csprojAssemblyReference.cache
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\obj\Debug\netcoreapp3.1\PutIn Bataille Navale.AssemblyInfoInputs.cache
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\obj\Debug\netcoreapp3.1\PutIn Bataille Navale.AssemblyInfo.cs
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\obj\Debug\netcoreapp3.1\PutIn Bataille Navale.dll
+C:\Users\student\source\repos\PutIn Bataille Navale\PutIn Bataille Navale\obj\Debug\netcoreapp3.1\PutIn Bataille Navale.pdb
