@@ -8,21 +8,20 @@ namespace PutIn_Bataille_Navale
 
         static void Main(string[] args)
         {
-            //bool Satouche = false;
-
+            
             int changement = 1;
+            //permet de changer l'état du jeu
             switch (changement)
             {
+                //initialisation des joueurs -> choix bateaux pour chaque joueur
                 case 0:
                     #region Putin
                     int choixBateauxPutin = 1;
-
-
-
+                                       
                     for (int i = 0; i < 5; i++)
                     {
 
-
+                        //tant que le joueur n'a pas choisi les 5 navires proposés, alors la demande s'effectue en boucle
                         do
                         {
 
@@ -62,7 +61,8 @@ namespace PutIn_Bataille_Navale
                     Console.WriteLine($"Vous avez choisi les bateaux : {choixBateauxPutin} pour PUTIN");
 
                     #endregion
-                    #region TRUMP
+                    #region TRUMP 
+                    //idem
                     int choixBateauxTRUMP = 1;
 
 
@@ -113,17 +113,60 @@ namespace PutIn_Bataille_Navale
 
 
                     break;
+
+                 //où on tire
                 case 1:
 
+                    //liste des joueurs
                     Joueur[] listeJoueurs = new Joueur[2];
                     listeJoueurs[0] = new Joueur("Putin");
                     listeJoueurs[1] = new Joueur("Trump");
 
                     for (int i = 0; i < 2; i++)
                     {
+                        Console.Clear();
                         Console.WriteLine("Player " + (i + 1) + " : " + listeJoueurs[i].nom);
+                        //affichage tableau
+                        for (int j = 0; j < 10; j++)
+                        {
+                            for (int k = 0; k < 10; k++)
+                            {
+
+                                Console.Write(listeJoueurs[i].tir[j, k]);
+
+
+                            }
+                            Console.WriteLine();
+                        }
+
+                        //demande des positions verticales et horizontales des deux joueurs
+                        int posHori;
+                        int posVerti;
+
+                        Console.WriteLine("Veuillez insérer une position horizontale : ");
+
+                        string position = Console.ReadLine();
+                        int.TryParse(position, out posHori);
+
+                        Console.WriteLine("Veuillez insérer une position verticale : ");
+
+                        string position2 = Console.ReadLine();
+                        int.TryParse(position2, out posVerti);
+                        Console.WriteLine(listeJoueurs[i].tir[posHori - 1, posVerti - 1]);
+                        //si touché ou pas
+                        if (listeJoueurs[i].tir[posHori - 1, posVerti - 1] == 0)
+                        {
+                            Console.WriteLine("RATÉ PAUVRE CON DE COMMUNISTE/CAPITALISTE !!!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("TOUCHÉ, SALAUD !!!");
+                        }
+
+                        Console.ReadKey();
+                                               
                     }
-                    Console.ReadLine();
+
 
                     break;
                 default:
@@ -131,16 +174,26 @@ namespace PutIn_Bataille_Navale
             }
         }
     }
-
+    //classe joueur permet d'initialiser les différentes grilles et la liste des joueurs
     class Joueur
     {
         public Joueur(string n)
         {
-            nom = n;
 
+            Random rnd = new Random();
+
+            nom = n;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    tir[i, j] = rnd.Next(0, 2);
+                }
+            }
         }
-          
+
         public string nom;
+
         public int[,] placement = new int[10, 10];
 
         public int[,] tir = new int[10, 10];
