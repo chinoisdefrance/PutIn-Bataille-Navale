@@ -8,9 +8,9 @@ namespace PutIn_Bataille_Navale
 
         static void Main(string[] args)
         {
-            bool Satouche = false;
+            //bool Satouche = false;
 
-            int changement = 0;
+            int changement = 1;
             switch (changement)
             {
                 case 0:
@@ -114,17 +114,37 @@ namespace PutIn_Bataille_Navale
 
                     break;
                 case 1:
-                    
-                    int[,] grille = new int[10,10];
 
+                    Joueur[] listeJoueurs = new Joueur[2];
+                    listeJoueurs[0] = new Joueur("Putin");
+                    listeJoueurs[1] = new Joueur("Trump");
 
-
-
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Console.WriteLine("Player " + (i + 1) + " : " + listeJoueurs[i].nom);
+                    }
+                    Console.ReadLine();
 
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    class Joueur
+    {
+        public Joueur(string n)
+        {
+            nom = n;
+
+        }
+          
+        public string nom;
+        public int[,] placement = new int[10, 10];
+
+        public int[,] tir = new int[10, 10];
+
+
     }
 }
